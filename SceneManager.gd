@@ -1,12 +1,14 @@
 extends Node3D
 
 @export var PlayerScene : PackedScene
+@onready var scoreboard = preload("res://scoreboard.tscn").instantiate()
 
 func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("quit"):
 		get_tree().quit()
 
 func _ready():
+	add_child(scoreboard)
 	var index = 0
 	for i in GameManager.Players:
 		var currentPlayer = PlayerScene.instantiate()

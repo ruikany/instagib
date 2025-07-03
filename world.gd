@@ -1,6 +1,7 @@
 extends Node
 
 @onready var main_menu = $"CanvasLayer/Main Menu"
+
 const scene = preload("res://environment.tscn")
 const Player = preload("res://player.tscn") # preload?
 
@@ -88,7 +89,8 @@ func send_player_info(name, id):
 		GameManager.Players[id] = {
 			"name": name,
 			"id": id,
-			"score": 0
+			"kills": 0,
+			"deaths": 0
 		}
 	
 	if multiplayer.is_server():

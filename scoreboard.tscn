@@ -1,0 +1,74 @@
+[gd_scene load_steps=2 format=3 uid="uid://ce1vjpjrtgqee"]
+
+[ext_resource type="Script" uid="uid://begjohfqlpc20" path="res://scoreboard.gd" id="1_jeshg"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+script = ExtResource("1_jeshg")
+
+[node name="Scoreboard" type="PanelContainer" parent="CanvasLayer2"]
+self_modulate = Color(0, 1, 1, 0.121569)
+visibility_layer = 5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 874.0
+offset_top = 186.0
+offset_bottom = -186.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer2/Scoreboard"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer2/Scoreboard/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="Label" type="Label" parent="CanvasLayer2/Scoreboard/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Scoreboard"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer2/Scoreboard/MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="LabelUsername" type="Label" parent="CanvasLayer2/Scoreboard/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Player name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LabelKills" type="Label" parent="CanvasLayer2/Scoreboard/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Kills"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LabelDeaths" type="Label" parent="CanvasLayer2/Scoreboard/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Deaths"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer2/Scoreboard/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="PlayerList" type="VBoxContainer" parent="CanvasLayer2/Scoreboard/MarginContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2

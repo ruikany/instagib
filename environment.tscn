@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://da8ntaw1u655b"]
+[gd_scene load_steps=7 format=3 uid="uid://da8ntaw1u655b"]
 
 [ext_resource type="Script" uid="uid://du8xf70f8sqi4" path="res://SceneManager.gd" id="1_0dwx2"]
 [ext_resource type="PackedScene" uid="uid://8s413qf5qm13" path="res://player.tscn" id="2_7b2gm"]
+[ext_resource type="PackedScene" uid="uid://cb30pilsdmp2w" path="res://Assets/OfficeChair.glb" id="3_wetts"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7b2gm"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -34,10 +35,16 @@ size = Vector3(77.2979, 0.0744629, 85.8389)
 [node name="SpawnLocations" type="Node3D" parent="."]
 
 [node name="0" type="Node3D" parent="SpawnLocations" groups=["PlayerSpawnPoint"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.02298, 3.72982, 26.8854)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.02298, 5.82641, 26.8854)
 
 [node name="1" type="Node3D" parent="SpawnLocations" groups=["PlayerSpawnPoint"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.4913, 2.36573, -11.7527)
 
 [node name="2" type="Node3D" parent="SpawnLocations" groups=["PlayerSpawnPoint"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.1285, 3.27532, -4.41427)
+
+[node name="3" type="Node3D" parent="SpawnLocations" groups=["PlayerSpawnPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.1996, 3.27532, -4.41427)
+
+[node name="OfficeChair" parent="." instance=ExtResource("3_wetts")]
+transform = Transform3D(-0.356184, 0, 0.934416, 0, 1, 0, -0.934416, 0, -0.356184, -15.2993, 0.0372295, 20.0585)
