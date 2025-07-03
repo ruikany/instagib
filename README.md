@@ -12,7 +12,8 @@
 - better lobby system with dedicated server: so only join button needed, sends player to existing lobby. When a sufficient nbr of players join, start countdown for game start (hypixel)
 - settings page for sens and custom keybinds
 - verify bandwidth usage (no clue how to, but apparently an issue)
-- dash mechanic
+- ~~dash mechanic~~
+- shoot animations, death animations
 - search up better player controllers
 - client side shooting animations, maybe server side raycast trajectory (ink from the pen or smth...)
 - sound effects, ingame track
